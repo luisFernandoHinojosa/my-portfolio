@@ -1,0 +1,43 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+
+<footer
+  class="bg-dark-bg text-cyber-blue border-t border-dark-border py-8 px-4"
+>
+  <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-4">
+    <h2 class="text-cyber-purple text-xl sm:text-2xl font-semibold">
+      Luis Fernando Hinojosa
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-6 text-base sm:text-lg">
+      <a
+        href="mailto:luisfernando@example.com"
+        class="text-cyber-pink hover:text-cyber-blue transition"
+      >
+        📧 Contacto
+      </a>
+      <a
+        href="https://github.com/tuusuario"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-cyber-pink hover:text-cyber-blue transition"
+      >
+        🐙 GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/tuusuario/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-cyber-pink hover:text-cyber-blue transition"
+      >
+        💼 LinkedIn
+      </a>
+    </div>
+
+    <p class="text-sm text-dark-border">
+      &copy; {year} Luis Fernando Hinojosa. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>

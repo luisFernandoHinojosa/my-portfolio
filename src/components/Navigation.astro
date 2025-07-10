@@ -1,0 +1,79 @@
+---
+import { personalInfo } from "../data/portfolio";
+
+const navItems = [
+  { href: "#home", label: "Inicio" },
+  { href: "#about", label: "Sobre mí" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#contact", label: "Contacto" },
+];
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-lg border-b border-dark-border"
+>
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div
+        class="text-2xl font-mono font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent"
+      >
+        &lt;LuisFH/&gt;
+      </div>
+
+      <div class="hidden md:flex space-x-8">
+        {
+          navItems.map((item) => (
+            <a
+              href={item.href}
+              class="nav-link text-gray-300 hover:text-cyber-blue transition-colors"
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <button class="md:hidden text-cyber-blue" id="mobile-menu-btn">
+        ☰
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div
+  class="fixed inset-0 z-40 bg-dark-bg/95 backdrop-blur-lg hidden"
+  id="mobile-menu"
+>
+  <div
+    class="flex flex-col items-center justify-center h-full space-y-8 text-2xl"
+  >
+    {
+      navItems.map((item) => (
+        <a
+          href={item.href}
+          class="mobile-nav-link text-gray-300 hover:text-cyber-blue transition-colors"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuBtn?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+</script>

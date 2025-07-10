@@ -1,0 +1,147 @@
+---
+export interface Props {
+  skill: {
+    id: string;
+    title: string;
+    icon: string;
+    skills: string[];
+    color: string;
+  };
+}
+
+const { skill } = Astro.props;
+
+const colorClasses = {
+  "cyber-blue": {
+    gradient: "from-cyan-400 to-blue-500",
+    glow: "shadow-cyan-500/25",
+    border: "border-cyan-400/50",
+    text: "text-cyan-300",
+    bg: "from-cyan-400/5 to-blue-500/5",
+  },
+  "cyber-purple": {
+    gradient: "from-purple-400 to-pink-500",
+    glow: "shadow-purple-500/25",
+    border: "border-purple-400/50",
+    text: "text-purple-300",
+    bg: "from-purple-400/5 to-pink-500/5",
+  },
+  "cyber-pink": {
+    gradient: "from-pink-400 to-rose-500",
+    glow: "shadow-pink-500/25",
+    border: "border-pink-400/50",
+    text: "text-pink-300",
+    bg: "from-pink-400/5 to-rose-500/5",
+  },
+};
+
+const colors = colorClasses[skill.color] || colorClasses["cyber-blue"];
+---
+
+<div
+  class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/40 backdrop-blur-sm border border-slate-700/50 hover:border-opacity-80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+  style={`--hover-border: ${colors.border.split("border-")[1]};`}
+>
+  <!-- Background gradient effect -->
+  <div
+    class={`absolute inset-0 bg-gradient-to-br ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+  >
+  </div>
+
+  <!-- Animated glow -->
+  <div
+    class={`absolute -inset-px rounded-2xl bg-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm -z-10`}
+  >
+  </div>
+
+  <div class="relative p-8 h-full flex flex-col">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <div
+        class={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${colors.gradient} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}
+      >
+        <span class="text-2xl">{skill.icon}</span>
+      </div>
+      <h3
+        class={`text-xl font-bold text-white group-hover:${colors.text} transition-colors duration-300`}
+      >
+        {skill.title}
+      </h3>
+    </div>
+
+    <!-- Skills grid -->
+    <div class="flex-1">
+      <div class="flex flex-wrap gap-3">
+        {
+          skill.skills.map((skillName, index) => (
+            <div
+              class="group/skill relative overflow-hidden rounded-lg bg-gradient-to-r from-slate-800/30 to-slate-700/20 backdrop-blur-sm border border-slate-600/30 hover:border-opacity-60 transition-all duration-300 hover:shadow-lg p-4"
+              style={`animation-delay: ${index * 50}ms`}
+            >
+              <div
+                class={`absolute inset-0 bg-gradient-to-r ${colors.bg} opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300`}
+              />
+
+              <div class="relative flex items-center gap-3">
+                <div
+                  class={`w-2 h-2 rounded-full bg-gradient-to-r ${colors.gradient} group-hover/skill:animate-pulse`}
+                />
+                <span
+                  class={`text-sm font-medium text-slate-300 group-hover/skill:${colors.text} transition-colors duration-300`}
+                >
+                  {skillName}
+                </span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-6 pt-4 border-t border-slate-700/30">
+      <div class="flex items-center justify-center gap-2">
+        <div
+          class={`w-2 h-2 rounded-full bg-gradient-to-r ${colors.gradient} animate-pulse`}
+        >
+        </div>
+        <span class={`text-xs font-medium ${colors.text}`}>
+          {skill.skills.length} tecnologías
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .group:hover {
+    border-color: var(--hover-border);
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .group/skill {
+    animation: slideInUp 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .group:hover .group/skill {
+    animation-play-state: running;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .group/skill {
+      animation: none;
+      opacity: 1;
+    }
+  }
+</style>

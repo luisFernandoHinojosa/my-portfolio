@@ -1,0 +1,106 @@
+---
+import ExperienceCard from './ExperienceCard.astro';
+import { experiences } from '../data/portfolio';
+---
+
+<section id="experiencia" class="py-20 relative overflow-hidden">
+  <!-- Background elements -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+  <div class="absolute top-0 left-0 w-full h-full">
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+  </div>
+  
+  <!-- Grid pattern -->
+  <div class="absolute inset-0 opacity-20">
+    <div class="grid grid-cols-20 grid-rows-20 w-full h-full">
+      {Array.from({ length: 400 }).map((_, i) => (
+        <div class="border-r border-b border-slate-700/30 last:border-r-0 [&:nth-child(20n)]:border-r-0"></div>
+      ))}
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-block">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyan-400"></div>
+          <span class="text-cyan-300 font-mono text-sm uppercase tracking-widest">
+            02. Experiencia
+          </span>
+          <div class="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyan-400"></div>
+        </div>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Trayectoria
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+          Profesional
+        </span>
+      </h2>
+      
+      <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Mi experiencia construyendo soluciones digitales innovadoras y trabajando en equipos multidisciplinarios
+      </p>
+    </div>
+
+    <!-- Experience Timeline -->
+    <div class="max-w-4xl mx-auto">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-purple-400/50 to-pink-400/50 transform md:-translate-x-px"></div>
+        
+        <!-- Experience items -->
+        <div class="space-y-12">
+          {experiences.map((experience, index) => (
+            <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <!-- Timeline dot -->
+              <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full transform -translate-x-1/2 md:translate-x-0 z-10 shadow-lg shadow-cyan-500/50">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
+              </div>
+              
+              <!-- Experience card -->
+              <div class={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'} pl-12 md:pl-0`}>
+                <div class="transform transition-all duration-500 hover:scale-105">
+                  <ExperienceCard experience={experience} />
+                </div>
+              </div>
+              
+              <!-- Spacer for opposite side -->
+              <div class="hidden md:block w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="text-center mt-16">
+      <div class="inline-block p-6 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-500">
+        <p class="text-slate-300 mb-4">
+          ¿Interesado en conocer más sobre mi experiencia?
+        </p>
+        <a 
+          href="#contacto" 
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+        >
+          Hablemos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid-cols-20 {
+    grid-template-columns: repeat(20, minmax(0, 1fr));
+  }
+  
+  .grid-rows-20 {
+    grid-template-rows: repeat(20, minmax(0, 1fr));
+  }
+</style>

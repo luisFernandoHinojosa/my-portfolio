@@ -1,0 +1,66 @@
+---
+import { personalInfo, education } from "../data/portfolio";
+---
+
+<section id="about" class="py-20 px-6">
+  <div class="container mx-auto">
+    <h2
+      class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent"
+    >
+      Sobre Mí
+    </h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <div
+          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 hover:border-cyber-blue/50 transition-all duration-300"
+        >
+          <h3 class="text-2xl font-semibold mb-4 text-cyber-blue">
+            🎓 Educación
+          </h3>
+          <p class="text-gray-300 mb-2">
+            <strong>{education.institution}</strong>
+          </p>
+          <p class="text-gray-400 mb-2">
+            {education.degree}
+          </p>
+          <p class="text-gray-500">
+            {education.semester}
+          </p>
+        </div>
+
+        <div
+          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 hover:border-cyber-purple/50 transition-all duration-300"
+        >
+          <h3 class="text-2xl font-semibold mb-4 text-cyber-purple">
+            🚀 Pasión
+          </h3>
+          <p class="text-gray-300">
+            Me apasiona crear soluciones tecnológicas innovadoras que impacten
+            positivamente en la vida de las personas. Siempre buscando aprender
+            nuevas tecnologías y enfrentar desafíos que me permitan crecer
+            profesionalmente.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div
+          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 animate-float"
+        >
+          <div class="text-center">
+            <div class="text-8xl mb-6">🎯</div>
+            <h3 class="text-2xl font-semibold mb-4 text-cyber-pink">
+              Objetivos
+            </h3>
+            <ul class="text-gray-300 space-y-2 text-left">
+              <li>✨ Desarrollar aplicaciones web innovadoras</li>
+              <li>🔧 Dominar nuevas tecnologías emergentes</li>
+              <li>🤝 Colaborar en proyectos de impacto social</li>
+              <li>🌟 Contribuir a la comunidad tech</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

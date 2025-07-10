@@ -1,0 +1,43 @@
+---
+import type { Project } from "../data/portfolio";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div
+  class="project-card bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-6 hover:border-cyber-blue/50 transition-all duration-300 transform hover:scale-105"
+>
+  <div class="text-4xl mb-4">{project.icon}</div>
+  <h3 class="text-xl font-semibold mb-3 text-cyber-blue">{project.title}</h3>
+  <p class="text-gray-400 text-sm mb-4">{project.period}</p>
+  <p class="text-gray-300 mb-4">{project.description}</p>
+
+  <div class="flex flex-wrap gap-2 mb-4">
+    {
+      project.technologies.map((tech) => (
+        <span class="px-3 py-1 bg-cyber-blue/20 text-cyber-blue rounded-full text-sm">
+          {tech}
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="text-gray-400 text-sm space-y-1">
+    <p>🎯 <strong>Rol:</strong> {project.role}</p>
+    <p>📂 <strong>Categoría:</strong> {project.category}</p>
+    <div class="mt-2">
+      <strong>Características:</strong>
+      <ul class="mt-1 space-y-1">
+        {
+          project.features.map((feature) => (
+            <li class="text-xs">• {feature}</li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
