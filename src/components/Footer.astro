@@ -1,5 +1,7 @@
 ---
-// src/components/Footer.astro
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
 const year = new Date().getFullYear();
 ---
 
@@ -8,31 +10,34 @@ const year = new Date().getFullYear();
 >
   <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-4">
     <h2 class="text-cyber-purple text-xl sm:text-2xl font-semibold">
-      Luis Fernando Hinojosa
+      Luis Fernando Hinojosa Rivera
     </h2>
 
     <div class="flex flex-wrap justify-center gap-6 text-base sm:text-lg">
       <a
         href="mailto:luisfernando@example.com"
-        class="text-cyber-pink hover:text-cyber-blue transition"
+        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
       >
-        📧 Contacto
+        <MailIcon />
+        <span>Contacto</span>
       </a>
       <a
-        href="https://github.com/tuusuario"
+        href="https://github.com/luisFernandoHinojosa"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-cyber-pink hover:text-cyber-blue transition"
+        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
       >
-        🐙 GitHub
+        <GitHubIcon />
+        <span>GitHub</span>
       </a>
       <a
-        href="https://www.linkedin.com/in/tuusuario/"
+        href="https://www.linkedin.com/in/luis-fernando-hinojosa-rivera-003903240/"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-cyber-pink hover:text-cyber-blue transition"
+        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
       >
-        💼 LinkedIn
+        <LinkedInIcon />
+        <span>LinkedIn</span>
       </a>
     </div>
 

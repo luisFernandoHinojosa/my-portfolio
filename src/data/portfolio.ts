@@ -6,6 +6,7 @@ export interface PersonalInfo {
   phone: string;
   portfolio?: string;
   linkedin?: string;
+  github?: string;
   title: string;
   description: string;
 }
@@ -54,7 +55,9 @@ export const personalInfo: PersonalInfo = {
   email: "luis111ferrivera@gmail.com",
   phone: "+591 67787486",
   portfolio: "#",
-  linkedin: "https://linkedin.com/in/luis-hinojosa",
+  github: "https://github.com/luisFernandoHinojosa",
+  linkedin:
+    "https://www.linkedin.com/in/luis-fernando-hinojosa-rivera-003903240/",
   title: "Desarrollador Full-Stack",
   description:
     "Desarrollador Full-Stack apasionado por crear experiencias digitales innovadoras y soluciones tecnológicas que impacten positivamente en la vida de las personas.",

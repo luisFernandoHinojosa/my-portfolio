@@ -8,15 +8,20 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  /* Custom Colors */
-  --color-cyber-blue: #00f5ff;
+  /* --color-cyber-blue: #00f5ff;
   --color-cyber-purple: #8b5cf6;
   --color-cyber-pink: #f471b5;
   --color-dark-bg: #0a0a0a;
   --color-dark-card: #1a1a1a;
-  --color-dark-border: #333333;
+  --color-dark-border: #333333; */
 
-  /* Custom Animations */
+  --color-cyber-blue: #0081a7; /* azul aguamarina */
+  --color-cyber-purple: #f07167; /* coral rojizo */
+  --color-cyber-pink: #fdfcdc; /* amarillo crema claro */
+  --color-dark-bg: #fef9ef; /* fondo cálido claro */
+  --color-dark-card: #fcefb4; /* pastel vibrante */
+  --color-dark-border: #e6c79c; /* borde retro beige */
+
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-slow: pulse 3s ease-in-out infinite;
   --animate-gradient: gradient 8s ease infinite;

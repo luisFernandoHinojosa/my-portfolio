@@ -4,15 +4,35 @@ import { personalInfo, education } from "../data/portfolio";
 
 <section id="about" class="py-20 px-6">
   <div class="container mx-auto">
-    <h2
-      class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent"
-    >
-      Sobre Mí
-    </h2>
+    <div class="text-center mb-16">
+      <div class="inline-block">
+        <div class="flex items-center gap-3 mb-4">
+          <div
+            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyber-blue"
+          >
+          </div>
+          <span
+            class="text-cyber-blue font-mono text-sm uppercase tracking-widest"
+          >
+            01. Sobre Mí
+          </span>
+          <div
+            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyber-blue"
+          >
+          </div>
+        </div>
+      </div>
+
+      <h2
+        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-6"
+      >
+        Sobre Mí
+      </h2>
+    </div>
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
         <div
-          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 hover:border-cyber-blue/50 transition-all duration-300"
+          class="border border-dark-border rounded-xl p-8 hover:border-cyber-blue/50 transition-all duration-300"
         >
           <h3 class="text-2xl font-semibold mb-4 text-cyber-blue">
             🎓 Educación
@@ -29,7 +49,7 @@ import { personalInfo, education } from "../data/portfolio";
         </div>
 
         <div
-          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 hover:border-cyber-purple/50 transition-all duration-300"
+          class="border border-dark-border rounded-xl p-8 hover:border-cyber-purple/50 transition-all duration-300"
         >
           <h3 class="text-2xl font-semibold mb-4 text-cyber-purple">
             🚀 Pasión
@@ -44,19 +64,17 @@ import { personalInfo, education } from "../data/portfolio";
       </div>
 
       <div class="relative">
-        <div
-          class="bg-dark-card/50 backdrop-blur-sm border border-dark-border rounded-xl p-8 animate-float"
-        >
+        <div class="border border-dark-border rounded-xl p-8 animate-float">
           <div class="text-center">
             <div class="text-8xl mb-6">🎯</div>
-            <h3 class="text-2xl font-semibold mb-4 text-cyber-pink">
+            <h3 class="text-2xl font-semibold mb-4 text-cyber-blue">
               Objetivos
             </h3>
             <ul class="text-gray-300 space-y-2 text-left">
               <li>✨ Desarrollar aplicaciones web innovadoras</li>
               <li>🔧 Dominar nuevas tecnologías emergentes</li>
               <li>🤝 Colaborar en proyectos de impacto social</li>
-              <li>🌟 Contribuir a la comunidad tech</li>
+              <!-- <li>🌟 Contribuir a la comunidad tech</li> -->
             </ul>
           </div>
         </div>

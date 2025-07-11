@@ -1,5 +1,8 @@
 ---
 import { personalInfo } from "../data/portfolio";
+import MailIcon from "./icons/MailIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
 ---
 
 <section
@@ -45,15 +48,15 @@ import { personalInfo } from "../data/portfolio";
     >
       <a
         href={`mailto:${personalInfo.email}`}
-        class="hover:text-cyber-blue transition-colors">📧</a
+        class="hover:text-cyber-blue transition-colors"><MailIcon /></a
       >
       <a
         href={personalInfo.linkedin}
-        class="hover:text-cyber-blue transition-colors">🔗</a
+        class="hover:text-cyber-blue transition-colors"><LinkedInIcon /></a
       >
       <a
-        href={personalInfo.portfolio}
-        class="hover:text-cyber-blue transition-colors">💼</a
+        href={personalInfo.github}
+        class="hover:text-cyber-blue transition-colors"><GitHubIcon /></a
       >
     </div>
   </div>
