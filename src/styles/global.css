@@ -15,12 +15,12 @@
   --color-dark-card: #1a1a1a;
   --color-dark-border: #333333; */
 
-  --color-cyber-blue: #0081a7; /* azul aguamarina */
-  --color-cyber-purple: #f07167; /* coral rojizo */
-  --color-cyber-pink: #fdfcdc; /* amarillo crema claro */
-  --color-dark-bg: #fef9ef; /* fondo cálido claro */
-  --color-dark-card: #fcefb4; /* pastel vibrante */
-  --color-dark-border: #e6c79c; /* borde retro beige */
+  --color-cyber-blue: #00ff9f; /* verde menta fosforescente */
+  --color-cyber-purple: #2cf6b3; /* verde agua brillante */
+  --color-cyber-pink: #14ffec; /* cian claro eléctrico */
+  --color-dark-bg: #050505; /* fondo negro total */
+  --color-dark-card: #0a0f0c; /* negro con verde tenue */
+  --color-dark-border: #1a1a1a; /* borde discreto */
 
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-slow: pulse 3s ease-in-out infinite;
