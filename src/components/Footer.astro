@@ -5,18 +5,18 @@ import MailIcon from "./icons/MailIcon.astro";
 const year = new Date().getFullYear();
 ---
 
-<footer
-  class="bg-dark-bg text-cyber-blue border-t border-dark-border py-8 px-4"
->
+<footer class="bg-light-background py-8 px-4">
   <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-4">
-    <h2 class="text-cyber-purple text-xl sm:text-2xl font-semibold">
+    <h2
+      class="text-light-white text-xl sm:text-2xl font-semibold bg-light-accent rotate-1"
+    >
       Luis Fernando Hinojosa Rivera
     </h2>
 
     <div class="flex flex-wrap justify-center gap-6 text-base sm:text-lg">
       <a
         href="mailto:luisfernando@example.com"
-        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
+        class="text-light-secondary hover:text-light-primary transition flex gap-1 flex-col sm:flex-row items-center rotate-2"
       >
         <MailIcon />
         <span>Contacto</span>
@@ -25,7 +25,7 @@ const year = new Date().getFullYear();
         href="https://github.com/luisFernandoHinojosa"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
+        class="text-light-secondary hover:text-light-primary transition flex gap-1 flex-col sm:flex-row items-center -rotate-2"
       >
         <GitHubIcon />
         <span>GitHub</span>
@@ -34,15 +34,15 @@ const year = new Date().getFullYear();
         href="https://www.linkedin.com/in/luis-fernando-hinojosa-rivera-003903240/"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-cyber-purple hover:text-cyber-blue transition flex flex-col sm:flex-row items-center"
+        class="text-light-secondary hover:text-light-primary transition flex gap-1 flex-col sm:flex-row items-center rotate-3"
       >
         <LinkedInIcon />
         <span>LinkedIn</span>
       </a>
     </div>
 
-    <p class="text-sm text-cyber-blue">
-      &copy; {year} Luis Fernando Hinojosa. Todos los derechos reservados.
+    <p class="text-sm text-light-text-body">
+      &copy; {year} Luis Fernando Hinojosa Rivera. Todos los derechos reservados.
     </p>
   </div>
 </footer>

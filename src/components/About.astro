@@ -8,75 +8,70 @@ import { personalInfo, education } from "../data/portfolio";
       <div class="inline-block">
         <div class="flex items-center gap-3 mb-4">
           <div
-            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-light-accent"
           >
           </div>
           <span
-            class="text-cyber-blue font-mono text-sm uppercase tracking-widest"
+            class="text-light-accent font-mono text-sm uppercase tracking-widest"
           >
             01. Sobre Mí
           </span>
           <div
-            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-light-accent"
           >
           </div>
         </div>
       </div>
 
       <h2
-        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-6"
+        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-light-primary to-light-secondary bg-clip-text text-transparent mb-6"
       >
         Sobre Mí
       </h2>
     </div>
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <div
-          class="border border-dark-border rounded-xl p-8 hover:border-cyber-blue/50 transition-all duration-300"
-        >
-          <h3 class="text-2xl font-semibold mb-4 text-cyber-blue">
-            🎓 Educación
-          </h3>
-          <p class="text-gray-300 mb-2">
-            <strong>{education.institution}</strong>
-          </p>
-          <p class="text-gray-400 mb-2">
-            {education.degree}
-          </p>
-          <p class="text-gray-500">
-            {education.semester}
-          </p>
-        </div>
-
-        <div
-          class="border border-dark-border rounded-xl p-8 hover:border-cyber-purple/50 transition-all duration-300"
-        >
-          <h3 class="text-2xl font-semibold mb-4 text-cyber-purple">
-            🚀 Pasión
-          </h3>
-          <p class="text-gray-300">
-            Me apasiona crear soluciones tecnológicas innovadoras que impacten
-            positivamente en la vida de las personas. Siempre buscando aprender
-            nuevas tecnologías y enfrentar desafíos que me permitan crecer
-            profesionalmente.
-          </p>
-        </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+      <div
+        class="transition-all duration-300 rotate-1 bg-light-background p-6 shadow-2xl drop-shadow-lg hover:scale-105"
+      >
+        <h3 class="text-2xl font-semibold mb-4 text-light-primary">
+          🎓 Educación
+        </h3>
+        <p class="text-light-text-body mb-2">
+          <strong>{education.institution}</strong>
+        </p>
+        <p class="text-light-text-body mb-2">
+          {education.degree}
+        </p>
+        <p class="text-light-text-body">
+          {education.semester}
+        </p>
       </div>
 
-      <div class="relative">
-        <div class="border border-dark-border rounded-xl p-8 animate-float">
-          <div class="text-center">
-            <div class="text-8xl mb-6">🎯</div>
-            <h3 class="text-2xl font-semibold mb-4 text-cyber-blue">
-              Objetivos
-            </h3>
-            <ul class="text-gray-300 space-y-2 text-left">
-              <li>✨ Desarrollar aplicaciones web innovadoras</li>
-              <li>🔧 Dominar nuevas tecnologías emergentes</li>
-              <li>🤝 Colaborar en proyectos de impacto social</li>
-              <!-- <li>🌟 Contribuir a la comunidad tech</li> -->
-            </ul>
-          </div>
+      <div
+        class="transition-all duration-300 -rotate-2 bg-light-background p-6 shadow-2xl drop-shadow-lg hover:scale-105"
+      >
+        <h3 class="text-2xl font-semibold mb-4 text-light-primary">
+          🚀 Pasión
+        </h3>
+        <p class="text-light-text-body">
+          Me apasiona crear soluciones tecnológicas innovadoras que impacten
+          positivamente en la vida de las personas. Siempre buscando aprender
+          nuevas tecnologías y enfrentar desafíos que me permitan crecer
+          profesionalmente.
+        </p>
+      </div>
+      <div
+        class="transition-all duration-300 bg-light-background p-6 shadow-2xl drop-shadow-lg hover:scale-105"
+      >
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold mb-4 text-light-primary">
+            🎯 Objetivos
+          </h3>
+          <ul class="text-light-text-body space-y-2 text-left">
+            <li>✨ Desarrollar aplicaciones web innovadoras</li>
+            <li>🔧 Dominar nuevas tecnologías emergentes</li>
+            <li>🤝 Colaborar en proyectos de impacto social</li>
+          </ul>
         </div>
       </div>
     </div>

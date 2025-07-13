@@ -1,4 +1,5 @@
 ---
+//Layout.astro
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
@@ -19,38 +20,33 @@ const { title } = Astro.props;
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
+    <style>
+      .bg-grid-pattern {
+        background-image: linear-gradient(
+            to right,
+            var(--color-light-primary) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            var(--color-light-primary),
+            1px,
+            transparent 1px
+          );
+        background-size: 20px 20px;
+      }
+    </style>
   </head>
-  <body class="bg-dark-bg text-white overflow-x-hidden">
-    <div class="fixed inset-0 z-0">
-      <div class="absolute inset-0 opacity-20">
-        <div class="grid grid-cols-20 grid-rows-20 w-full h-full">
-          {
-            Array.from({ length: 400 }).map((_, i) => (
-              <div class="border-r border-b border-cyber-pink last:border-r-0 [&:nth-child(20n)]:border-r-0" />
-            ))
-          }
-        </div>
-      </div>
-
-      <!-- <div
-        class="absolute inset-0 bg-gradient-to-br from-cyber-blue/5 via-cyber-purple/5 to-cyber-pink/5 animate-gradient bg-[length:400%_400%]"
-      >
-      </div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(0,245,255,0.1),transparent_50%)] animate-pulse-slow"
-      >
-      </div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)] animate-pulse-slow"
-        style="animation-delay: 1s;"
-      >
-      </div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(244,113,181,0.1),transparent_50%)] animate-pulse-slow"
-        style="animation-delay: 2s;"
-      >
-      </div> -->
+  <body class="bg-light-background overflow-x-hidden">
+    <!-- Fondo de hoja cuadriculada -->
+    <div class="fixed inset-0 -z-10">
+      <!-- Cuadrícula principal -->
+      <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
     </div>
 
     <slot />

@@ -9,28 +9,28 @@ import ProjectCard from "./ProjectCard.astro";
       <div class="inline-block">
         <div class="flex items-center gap-3 mb-4">
           <div
-            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-light-accent"
           >
           </div>
           <span
-            class="text-cyber-blue font-mono text-sm uppercase tracking-widest"
+            class="text-light-accent font-mono text-sm uppercase tracking-widest"
           >
             02. Proyectos
           </span>
           <div
-            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-light-accent"
           >
           </div>
         </div>
       </div>
 
       <h2
-        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-6"
+        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-light-primary to-light-secondary bg-clip-text text-transparent mb-6"
       >
         Proyectos Principales
       </h2>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
   </div>

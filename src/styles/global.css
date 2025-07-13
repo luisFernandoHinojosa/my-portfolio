@@ -8,19 +8,19 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  /* --color-cyber-blue: #00f5ff;
-  --color-cyber-purple: #8b5cf6;
-  --color-cyber-pink: #f471b5;
-  --color-dark-bg: #0a0a0a;
-  --color-dark-card: #1a1a1a;
-  --color-dark-border: #333333; */
+  --color-light-primary: #1a233b; /*Headers, barras de navegacion, footer, titulos h1 y h2, iconos, border de tarjetas */
+  --color-light-secondary: #32998a; /* Botones, enlaces, iconos, */
+  --color-light-background: #f0f2f5; /* fondo principal */
+  --color-light-accent: #e76f51; /* destacados */
+  --color-light-text-body: #333333; /* texto parrafo, titulos secundarios */
+  --color-light-white: #ffffff; /* Blanco Puro */
 
-  --color-cyber-blue: #00ff9f; /* verde menta fosforescente */
-  --color-cyber-purple: #2cf6b3; /* verde agua brillante */
-  --color-cyber-pink: #14ffec; /* cian claro eléctrico */
-  --color-dark-bg: #050505; /* fondo negro total */
-  --color-dark-card: #0a0f0c; /* negro con verde tenue */
-  --color-dark-border: #1a1a1a; /* borde discreto */
+  --color-dark-primary: #1a233b; /*Headers, barras de navegacion, footer, titulos h1 y h2, iconos, border de tarjetas */
+  --color-dark-secondary: #32998a; /* Botones, enlaces, iconos, */
+  --color-dark-background: #0a0a0a; /* fondo principal */
+  --color-dark-accent: #e76f51; /* destacados */
+  --color-dark-text-body: #333333; /* texto parrafo, titulos secundarios */
+  --color-dark-white: #ffffff; /* Blanco Puro */
 
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-slow: pulse 3s ease-in-out infinite;
@@ -88,21 +88,14 @@
   height: 2px;
   background: linear-gradient(
     90deg,
-    var(--color-cyber-blue),
-    var(--color-cyber-purple)
+    var(--color-light-primary),
+    var(--color-light-secondary)
   );
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
-}
-
-.project-card:hover,
-.experience-card:hover,
-.skills-card:hover,
-.contact-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.1);
 }
 
 .fade-in-section {
@@ -129,8 +122,8 @@
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     45deg,
-    var(--color-cyber-blue),
-    var(--color-cyber-purple)
+    var(--color-light-primary),
+    var(--color-light-secondary)
   );
   border-radius: 4px;
 }
@@ -138,7 +131,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(
     45deg,
-    var(--color-cyber-blue),
-    var(--color-cyber-pink)
+    var(--color-light-primary),
+    var(--color-light-secondary)
   );
 }

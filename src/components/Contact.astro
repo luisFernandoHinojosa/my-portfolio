@@ -11,32 +11,27 @@ import WhatsappIcon from "./icons/WhatsappIcon.astro";
       <div class="inline-block">
         <div class="flex items-center gap-3 mb-4">
           <div
-            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-r from-transparent to-light-accent"
           >
           </div>
           <span
-            class="text-cyber-blue font-mono text-sm uppercase tracking-widest"
+            class="text-light-accent font-mono text-sm uppercase tracking-widest"
           >
-            03. Habilidades
+            05. Contacto
           </span>
           <div
-            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyber-blue"
+            class="w-12 h-0.5 bg-gradient-to-l from-transparent to-light-accent"
           >
           </div>
         </div>
       </div>
 
       <h2
-        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-cyber-blue to-cyber-purple bg-clip-text text-transparent mb-6"
+        class="text-4xl md:text-5xl block font-bold bg-gradient-to-r from-light-primary to-light-secondary bg-clip-text text-transparent mb-6"
       >
-        Conectemos
-        <span
-          class="block text-transparent bg-clip-text bg-gradient-to-r from-cyber-purple to-cyber-blue"
-        >
-          Para Colaborar
-        </span>
+        Conectemos Para Colaborar
       </h2>
-      <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-xl text-light-text-body max-w-2xl mx-auto leading-relaxed">
         ¿Tienes un proyecto en mente? Me encantaría conocer más sobre tus ideas
         y explorar cómo podemos trabajar juntos.
       </p>
@@ -47,23 +42,19 @@ import WhatsappIcon from "./icons/WhatsappIcon.astro";
         <a
           href={`email:luis111ferrivera@gmail.com`}
           target="_blank"
-          class="group relative overflow-hidden rounded-2xl border border-cyber-blue hover:border-cyber-purple transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 p-8"
+          class="group relative transition-all duration-500 hover:shadow-2xl hover:bg-light-background hover:-translate-y-2 p-6"
         >
           <div class="relative text-center">
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 mx-auto mb-4 bg-light-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
             >
-              <MailIcon class="w-8 h-8 text-cyan-400" />
+              <MailIcon class="w-8 h-8 text-light-white" />
             </div>
-            <h3
-              class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors"
-            >
-              Email
-            </h3>
-            <p class="text-slate-300 text-sm mb-4">
+            <h3 class="text-xl font-bold text-light-primary mb-2">Email</h3>
+            <p class="text-light-text-body text-sm mb-4">
               La forma más directa de contactarme
             </p>
-            <div class="text-cyan-300 font-mono text-sm">
+            <div class="text-light-text-body font-mono text-sm">
               {personalInfo.email}
             </div>
           </div>
@@ -71,23 +62,19 @@ import WhatsappIcon from "./icons/WhatsappIcon.astro";
 
         <a
           href={`tel:${personalInfo.phone}`}
-          class="group relative overflow-hidden rounded-2xl border border-cyber-blue hover:border-cyber-purple transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 p-8"
+          class="group relative transition-all duration-500 hover:shadow-2xl hover:bg-light-background hover:-translate-y-2 p-6"
         >
           <div class="relative text-center">
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 mx-auto mb-4 bg-light-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
             >
-              <WhatsappIcon class="w-8 h-8 text-purple-400" />
+              <WhatsappIcon class="w-8 h-8 text-light-white" />
             </div>
-            <h3
-              class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors"
-            >
-              Teléfono
-            </h3>
-            <p class="text-slate-300 text-sm mb-4">
+            <h3 class="text-xl font-bold text-light-primary mb-2">Teléfono</h3>
+            <p class="text-light-text-body text-sm mb-4">
               Para una conversación más directa
             </p>
-            <div class="text-purple-300 font-mono text-sm">
+            <div class="text-light-text-body font-mono text-sm">
               {personalInfo.phone}
             </div>
           </div>
@@ -96,23 +83,21 @@ import WhatsappIcon from "./icons/WhatsappIcon.astro";
           href={personalInfo.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative overflow-hidden rounded-2xl border border-cyber-blue hover:border-cyber-purple transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 p-8"
+          class="group relative transition-all duration-500 hover:shadow-2xl hover:bg-light-background hover:-translate-y-2 p-6"
         >
           <div class="relative text-center">
             <div
-              class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-pink-400/20 to-rose-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 mx-auto mb-4 bg-light-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
             >
-              <LinkedInIcon class="w-8 h-8 text-pink-400" />
+              <LinkedInIcon class="w-8 h-8 text-light-white" />
             </div>
-            <h3
-              class="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors"
-            >
-              LinkedIn
-            </h3>
-            <p class="text-slate-300 text-sm mb-4">
+            <h3 class="text-xl font-bold text-light-primary mb-2">LinkedIn</h3>
+            <p class="text-light-text-body text-sm mb-4">
               Conectemos profesionalmente
             </p>
-            <div class="text-pink-300 font-mono text-sm">/in/luis-hinojosa</div>
+            <div class="text-light-text-body font-mono text-sm">
+              /in/luis-hinojosa
+            </div>
           </div>
         </a>
       </div>

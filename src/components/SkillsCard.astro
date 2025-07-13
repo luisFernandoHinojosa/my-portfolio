@@ -7,65 +7,41 @@ export interface Props {
     skills: string[];
     color: string;
   };
+  index: number;
 }
 
-const { skill } = Astro.props;
+const { skill, index } = Astro.props;
+
+// Generar un número aleatorio entre -5 y 5
+const rotate = (Math.random() * 10 - 5).toFixed(2); // Ej: -3.42, 4.12, etc.
 ---
 
-<div
-  class="group relative rounded-2xl border border-cyber-purple hover:border-opacity-80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
-  style={`--hover-border: ${skill.color.split("border-")[1]};`}
->
-  <div class="relative p-8 h-full flex flex-col">
+<div class="" style={`transform: rotate(${rotate}deg);`}>
+  <div class="relative p-6 h-full flex flex-col">
     <!-- Header -->
-    <div class="text-center mb-8">
-      <div
-        class={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}
-      >
+    <div class="text-center mb-2">
+      <div class={`flex items-center gap-2 justify-center mb-4`}>
         <span class="text-2xl">{skill.icon}</span>
+        <h3
+          class={`text-xl font-bold text-light-primary  transition-colors duration-300`}
+        >
+          {skill.title}
+        </h3>
       </div>
-      <h3
-        class={`text-xl font-bold text-slate-500  transition-colors duration-300`}
-      >
-        {skill.title}
-      </h3>
     </div>
 
     <!-- Skills grid -->
     <div class="flex-1">
       <div class="flex flex-wrap gap-3">
         {
-          skill.skills.map((skillName, index) => (
-            <div
-              class="group/skill relative overflow-hidden rounded-lg bg-gradient-to-r from-cyber-pink to-cyber-blue backdrop-blur-sm border border-slate-600/30 hover:border-opacity-60 transition-all duration-300 hover:shadow-lg p-4"
-              style={`animation-delay: ${index * 50}ms`}
-            >
-              <div class="relative flex items-center gap-3">
-                <div
-                  class={`w-2 h-2 rounded-full group-hover/skill:animate-pulse`}
-                />
-                <span
-                  class={`text-sm font-medium text-slate-200 group-hover/skill:${skill.color} transition-colors duration-300`}
-                >
-                  {skillName}
-                </span>
+          skill.skills.map((skillName) => (
+            <div class="px-3 py-1 text-light-white bg-light-accent drop-shadow-lg text-sm">
+              <div class="relative flex items-center gap-3 justify-center">
+                <span class={`text-sm font-medium`}>{skillName}</span>
               </div>
             </div>
           ))
         }
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="mt-6 pt-4 border-t border-slate-700/30">
-      <div class="flex items-center justify-center gap-2">
-        <div
-          class={`w-2 h-2 rounded-full bg-gradient-to-r ${skill.color} animate-pulse`}
-        >
-        </div>
-        <span class={`text-xs font-medium ${skill.color}`}>
-          {skill.skills.length} tecnologías
-        </span>
       </div>
     </div>
   </div>
